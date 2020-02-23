@@ -1,0 +1,123 @@
+@import "variables";
+
+body {
+    margin: 0;
+    color: black;
+  }
+  
+  header {
+  padding: 10px 50px;
+  border-bottom: 3px solid lightgray;
+  }
+  
+  .header__inner {
+    @include flexed;
+   }
+  
+  
+  .item {
+    display: inline-block;
+   @include text-font(11px);
+  line-height: 14px;
+  text-transform: uppercase;
+  margin-left: 20px;
+  }
+  
+  .item:hover {
+    color: #00ACDC;
+    transition: $transition;
+    border-bottom: 2px solid #00ACDC;
+  }
+  
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-gap: 48px;
+      padding: 78px 128px;
+      height: 920px;
+  }
+
+  .card {
+    width: 200px;
+    box-sizing: border-box;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding-bottom: 15px;
+  }
+  .card:hover {
+    transform: scale(1.1);
+    transition: $transition;
+  }
+  
+  .card__image {
+    padding: 30px 20px;
+    padding-bottom: 0;
+  }
+  
+  .card__content {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .card__link {
+    display: block;
+    @include text-font(12px);
+   line-height: 15px;
+    width: 170px;
+    margin-top: 45px;
+    }
+  
+  .card__code {
+    @include text-font(11px);
+    line-height: 13px;
+    margin-top: 6px;
+  }
+  
+  .card__stars {
+    @include flexed;
+   }
+  
+  .card__rate {
+    font-family:"Roboto";
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  }
+  
+  .card__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  } 
+  .card__price_text {
+    font-family: "Roboto";
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 13px;
+  }
+  
+  .card__price_amount {
+    @include text-font(16px);
+  line-height: 19px;
+  }
+   
+  .card__btn {
+    @include text-font(14px);
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #00ACDC;
+  border-radius: 5px;
+  width: 170px;
+  padding: 12px 0;
+  border: 0;
+  }
+  
+  .card__btn:hover {
+    transform: scale(1.05);
+    transition: $transition;
+    }
+  
+  
